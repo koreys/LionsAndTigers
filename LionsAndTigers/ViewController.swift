@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var ageLbl: UILabel!
     @IBOutlet weak var breddLbl: UILabel!
     
+    var myTigers:[Tiger] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,8 @@ class ViewController: UIViewController {
         myTiger.breed = "Bengal"
         myTiger.image = UIImage(named: "BengalTiger.jpg")
         
+        myTigers.append(myTiger)
+        
         myImageView.image = myTiger.image
         nameLbl.text = myTiger.name
         ageLbl.text = "\(myTiger.age)"
@@ -33,6 +36,8 @@ class ViewController: UIViewController {
         var secoundTiger = Tiger(age: 6, name: "Tigres", breed: "Indo Chinese Tiger", image: UIImage(named: "IndochineseTiger.jpg"))
         var thirdTiger = Tiger(age: 4, name: "Jacob", breed: "Malayan Tiger", image: UIImage(named: "MalayanTiger.jpg"))
         var fourthTiger = Tiger(age: 5, name: "Scar", breed: "Siberian Tiger", image: UIImage(named: "SiberianTiger.jpg"))
+        myTigers += [secoundTiger, thirdTiger, fourthTiger]
+        
         
     }
 

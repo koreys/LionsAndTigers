@@ -14,6 +14,14 @@
 		9CFA93D11A0E86CE00C69A9D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CFA93CF1A0E86CE00C69A9D /* LaunchScreen.xib */; };
 		9CFA93DD1A0E86CE00C69A9D /* LionsAndTigersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFA93DC1A0E86CE00C69A9D /* LionsAndTigersTests.swift */; };
 		9CFA93E71A0E8BB800C69A9D /* Tiger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFA93E61A0E8BB800C69A9D /* Tiger.swift */; };
+		9CFA93F01A0E90B500C69A9D /* BengalTiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CFA93E81A0E90B500C69A9D /* BengalTiger.jpg */; };
+		9CFA93F11A0E90B500C69A9D /* IndochineseTiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CFA93E91A0E90B500C69A9D /* IndochineseTiger.jpg */; };
+		9CFA93F21A0E90B500C69A9D /* Lion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CFA93EA1A0E90B500C69A9D /* Lion.jpg */; };
+		9CFA93F31A0E90B500C69A9D /* LionCub1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CFA93EB1A0E90B500C69A9D /* LionCub1.jpg */; };
+		9CFA93F41A0E90B500C69A9D /* LionCub2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9CFA93EC1A0E90B500C69A9D /* LionCub2.jpeg */; };
+		9CFA93F51A0E90B500C69A9D /* Lioness.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9CFA93ED1A0E90B500C69A9D /* Lioness.jpeg */; };
+		9CFA93F61A0E90B500C69A9D /* MalayanTiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CFA93EE1A0E90B500C69A9D /* MalayanTiger.jpg */; };
+		9CFA93F71A0E90B500C69A9D /* SiberianTiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CFA93EF1A0E90B500C69A9D /* SiberianTiger.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +46,14 @@
 		9CFA93DB1A0E86CE00C69A9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CFA93DC1A0E86CE00C69A9D /* LionsAndTigersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionsAndTigersTests.swift; sourceTree = "<group>"; };
 		9CFA93E61A0E8BB800C69A9D /* Tiger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tiger.swift; sourceTree = "<group>"; };
+		9CFA93E81A0E90B500C69A9D /* BengalTiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BengalTiger.jpg; sourceTree = "<group>"; };
+		9CFA93E91A0E90B500C69A9D /* IndochineseTiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IndochineseTiger.jpg; sourceTree = "<group>"; };
+		9CFA93EA1A0E90B500C69A9D /* Lion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lion.jpg; sourceTree = "<group>"; };
+		9CFA93EB1A0E90B500C69A9D /* LionCub1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LionCub1.jpg; sourceTree = "<group>"; };
+		9CFA93EC1A0E90B500C69A9D /* LionCub2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LionCub2.jpeg; sourceTree = "<group>"; };
+		9CFA93ED1A0E90B500C69A9D /* Lioness.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lioness.jpeg; sourceTree = "<group>"; };
+		9CFA93EE1A0E90B500C69A9D /* MalayanTiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MalayanTiger.jpg; sourceTree = "<group>"; };
+		9CFA93EF1A0E90B500C69A9D /* SiberianTiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SiberianTiger.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +109,14 @@
 		9CFA93C41A0E86CE00C69A9D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9CFA93E81A0E90B500C69A9D /* BengalTiger.jpg */,
+				9CFA93E91A0E90B500C69A9D /* IndochineseTiger.jpg */,
+				9CFA93EA1A0E90B500C69A9D /* Lion.jpg */,
+				9CFA93EB1A0E90B500C69A9D /* LionCub1.jpg */,
+				9CFA93EC1A0E90B500C69A9D /* LionCub2.jpeg */,
+				9CFA93ED1A0E90B500C69A9D /* Lioness.jpeg */,
+				9CFA93EE1A0E90B500C69A9D /* MalayanTiger.jpg */,
+				9CFA93EF1A0E90B500C69A9D /* SiberianTiger.jpg */,
 				9CFA93C51A0E86CE00C69A9D /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -195,9 +219,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CFA93F11A0E90B500C69A9D /* IndochineseTiger.jpg in Resources */,
 				9CFA93CC1A0E86CE00C69A9D /* Main.storyboard in Resources */,
 				9CFA93D11A0E86CE00C69A9D /* LaunchScreen.xib in Resources */,
+				9CFA93F51A0E90B500C69A9D /* Lioness.jpeg in Resources */,
+				9CFA93F31A0E90B500C69A9D /* LionCub1.jpg in Resources */,
+				9CFA93F61A0E90B500C69A9D /* MalayanTiger.jpg in Resources */,
+				9CFA93F71A0E90B500C69A9D /* SiberianTiger.jpg in Resources */,
+				9CFA93F01A0E90B500C69A9D /* BengalTiger.jpg in Resources */,
 				9CFA93CE1A0E86CE00C69A9D /* Images.xcassets in Resources */,
+				9CFA93F21A0E90B500C69A9D /* Lion.jpg in Resources */,
+				9CFA93F41A0E90B500C69A9D /* LionCub2.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

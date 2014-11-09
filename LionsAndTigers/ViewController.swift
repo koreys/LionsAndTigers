@@ -55,7 +55,17 @@ class ViewController: UIViewController {
         ageLbl.text = "\(tiger.age)"
         breddLbl.text = tiger.breed
         
+        UIView.transitionWithView(self.view, duration: 2, options: UIViewAnimationOptions.TransitionFlipFromLeft, animations: {
+            
+            self.myImageView.image = tiger.image
+            self.nameLbl.text = tiger.name
+            self.ageLbl.text = "\(tiger.age)"
+            self.breddLbl.text = tiger.breed
+            
+            }, completion: {(finished: Bool) -> () in })
+        
     }
 
 }
 
+    

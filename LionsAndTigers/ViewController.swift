@@ -47,6 +47,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func nextButtonPressed(sender: UIBarButtonItem) {
+        let RandIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
+        let tiger = myTigers[RandIndex]
+        
+        myImageView.image = tiger.image
+        nameLbl.text = tiger.name
+        ageLbl.text = "\(tiger.age)"
+        breddLbl.text = tiger.breed
+        
     }
 
 }

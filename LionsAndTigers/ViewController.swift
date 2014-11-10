@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     var myTigers:[Tiger] = []
     
+    var currentIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -47,15 +49,23 @@ class ViewController: UIViewController {
     }
 
     @IBAction func nextButtonPressed(sender: UIBarButtonItem) {
-        let RandIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
-        let tiger = myTigers[RandIndex]
+        
+        var randIndex = currentIndex
+        
+        while randIndex == currentIndex {
+            randIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
+        }
+        
+        currentIndex = randIndex
+        
+        let tiger = myTigers[randIndex]
         
         myImageView.image = tiger.image
         nameLbl.text = tiger.name
         ageLbl.text = "\(tiger.age)"
         breddLbl.text = tiger.breed
         
-        UIView.transitionWithView(self.view, duration: 2, options: UIViewAnimationOptions.TransitionFlipFromLeft, animations: {
+        UIView.transitionWithView(self.view, duration: 0.5, options: UIViewAnimationOptions.TransitionFlipFromLeft, animations: {
             
             self.myImageView.image = tiger.image
             self.nameLbl.text = tiger.name

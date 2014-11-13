@@ -30,4 +30,20 @@ struct Tiger {
         return regularAge * 3
     }
     
+    func randomFact () -> String {
+        var randomNumber = Int(arc4random_uniform(UInt32(3)))
+        var randomFact: String
+        if randomNumber == 0 {
+            randomFact = "Korey is King!"
+        }
+        else if randomNumber == 1 {
+            randomFact = "My name is spelt with a K!"
+        }
+        else {
+            randomFact = "I amd really 36 years young."
+        }
+        
+        return randomFact
+    }
+    
 }

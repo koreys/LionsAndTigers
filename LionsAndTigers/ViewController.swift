@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var ageLbl: UILabel!
     @IBOutlet weak var breddLbl: UILabel!
+    @IBOutlet weak var randoFactLbl: UILabel!
     
     var myTigers:[Tiger] = []
     
@@ -69,6 +70,8 @@ class ViewController: UIViewController {
             self.nameLbl.text = tiger.name
             self.ageLbl.text = "\(tiger.age)"
             self.breddLbl.text = tiger.breed
+            self.randoFactLbl.text = tiger.randomFact()
+            
             
             }, completion: {(finished: Bool) -> () in })
         

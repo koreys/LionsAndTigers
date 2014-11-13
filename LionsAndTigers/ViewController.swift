@@ -24,9 +24,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         var myTiger = Tiger()
         myTiger.name = "Korey"
-        myTiger.age = 36
+        myTiger.age = myTiger.convertToTigerYears(36)
         myTiger.breed = "Bengal"
         myTiger.image = UIImage(named: "BengalTiger.jpg")
+        
         
         myTigers.append(myTiger)
         
@@ -35,9 +36,9 @@ class ViewController: UIViewController {
         ageLbl.text = "\(myTiger.age)"
         breddLbl.text = myTiger.breed
         
-        var secoundTiger = Tiger(age: 6, name: "Tigres", breed: "Indo Chinese Tiger", image: UIImage(named: "IndochineseTiger.jpg"))
-        var thirdTiger = Tiger(age: 4, name: "Jacob", breed: "Malayan Tiger", image: UIImage(named: "MalayanTiger.jpg"))
-        var fourthTiger = Tiger(age: 5, name: "Scar", breed: "Siberian Tiger", image: UIImage(named: "SiberianTiger.jpg"))
+        var secoundTiger = Tiger(age: myTiger.convertToTigerYears(6), name: "Tigres", breed: "Indo Chinese Tiger", image: UIImage(named: "IndochineseTiger.jpg"))
+        var thirdTiger = Tiger(age: myTiger.convertToTigerYears(4), name: "Jacob", breed: "Malayan Tiger", image: UIImage(named: "MalayanTiger.jpg"))
+        var fourthTiger = Tiger(age: myTiger.convertToTigerYears(5), name: "Scar", breed: "Siberian Tiger", image: UIImage(named: "SiberianTiger.jpg"))
         myTigers += [secoundTiger, thirdTiger, fourthTiger]
         
         

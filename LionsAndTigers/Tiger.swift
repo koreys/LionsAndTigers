@@ -26,4 +26,8 @@ struct Tiger {
         }
     }
     
+    func convertToTigerYears(regularAge: Int) ->Int {
+        return regularAge * 3
+    }
+    
 }

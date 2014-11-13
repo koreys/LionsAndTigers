@@ -59,11 +59,8 @@ class ViewController: UIViewController {
         currentIndex = randIndex
         
         let tiger = myTigers[randIndex]
+        tiger.chuffNumberOfTimes(currentIndex , tigerName: tiger.name)
         
-        myImageView.image = tiger.image
-        nameLbl.text = tiger.name
-        ageLbl.text = "\(tiger.age)"
-        breddLbl.text = tiger.breed
         
         UIView.transitionWithView(self.view, duration: 0.5, options: UIViewAnimationOptions.TransitionFlipFromLeft, animations: {
             

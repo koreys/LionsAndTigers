@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     var myTigers:[Tiger] = []
     var lions:[Lion] = []
     
+    var currentAnimal = (species: "Tiger", index: 0)
+    
     
     var currentIndex = 0
     
@@ -70,31 +72,54 @@ class ViewController: UIViewController {
 
     @IBAction func nextButtonPressed(sender: UIBarButtonItem) {
         
-        var randIndex = currentIndex
+        updateAnimal()
+        updateView()
         
-        while randIndex == currentIndex {
-            randIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
+    }
+    
+    func updateAnimal() {
+        switch currentAnimal {
+        case ("Tiger", _):
+            let randIndex = Int(arc4random_uniform(UInt32(lions.count)))
+            currentAnimal = ("Lion", randIndex)
+        default:
+            let randIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
+            currentAnimal = ("Tiger", randIndex)
         }
         
-        currentIndex = randIndex
-        
-        let tiger = myTigers[randIndex]
-        tiger.chuffNumberOfTimes(currentIndex , tigerName: tiger.name)
+    }
+
+    
+    func updateView() {
         
         
         UIView.transitionWithView(self.view, duration: 0.5, options: UIViewAnimationOptions.TransitionFlipFromLeft, animations: {
             
-            self.myImageView.image = tiger.image
-            self.nameLbl.text = tiger.name
-            self.ageLbl.text = "\(tiger.age)"
-            self.breddLbl.text = tiger.breed
-            self.randoFactLbl.text = tiger.randomFact()
+            if self.currentAnimal.species == "Tiger" {
+                let tiger = self.myTigers[self.currentAnimal.index]
+                self.myImageView.image = tiger.image
+                self.breddLbl.text = tiger.breed
+                self.nameLbl.text = tiger.name
+                self.ageLbl.text = "\(tiger.age)"
+                self.randoFactLbl.text = tiger.randomFact()
+                
+            } else if self.currentAnimal.species == "Lion" {
+                let lion = self.lions[self.currentAnimal.index]
+                self.myImageView.image = lion.image
+                self.breddLbl.text = lion.subspecies
+                self.nameLbl.text = lion.name
+                self.ageLbl.text = "\(lion.age)"
+                self.randoFactLbl.hidden = true
+                
+            }
+            self.randoFactLbl.hidden = false
             
             
             }, completion: {(finished: Bool) -> () in })
         
     }
-
+    
+    
 }
 
     

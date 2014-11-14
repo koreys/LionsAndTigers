@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var randoFactLbl: UILabel!
     
     var myTigers:[Tiger] = []
+    var lions:[Lion] = []
+    
     
     var currentIndex = 0
     
@@ -41,6 +43,22 @@ class ViewController: UIViewController {
         var thirdTiger = Tiger(age: myTiger.convertToTigerYears(4), name: "Jacob", breed: "Malayan Tiger", image: UIImage(named: "MalayanTiger.jpg"))
         var fourthTiger = Tiger(age: myTiger.convertToTigerYears(5), name: "Scar", breed: "Siberian Tiger", image: UIImage(named: "SiberianTiger.jpg"))
         myTigers += [secoundTiger, thirdTiger, fourthTiger]
+        
+        var lion = Lion()
+        lion.age = 4
+        lion.image = UIImage(named: "Lion.jpg")
+        lion.isAlphaMale = false
+        lion.name = "Mufasa"
+        lion.subspecies = "West African"
+        
+        var lioness = Lion()
+        lioness.age = 3
+        lioness.image = UIImage(named: "Lioness.jpeg")
+        lioness.isAlphaMale = false
+        lioness.name = "Sarabi"
+        lioness.subspecies = "Barbary"
+        
+        self.lions += [lion, lioness]
         
         
     }

@@ -18,9 +18,9 @@ class ViewController: UIViewController {
     
     var myTigers:[Tiger] = []
     var lions:[Lion] = []
+    var lionCubs:[LionCub] = []
     
     var currentAnimal = (species: "Tiger", index: 0)
-    
     
     var currentIndex = 0
     
@@ -60,7 +60,29 @@ class ViewController: UIViewController {
         lioness.name = "Sarabi"
         lioness.subspecies = "Barbary"
         
+        lion.roar()
+        lion.changeToAlphaMale()
+        lioness.roar()
+        
+        
         self.lions += [lion, lioness]
+        
+        var lionCub = LionCub()
+        lionCub.age = 1
+        lionCub.name = "Simba"
+        lionCub.image = UIImage(named: "LionCub1.jpg")
+        lionCub.subspecies = "Masai"
+        lionCub.rubLionCubsBelly()
+        lionCub.roar()
+        
+        var lionessCub = LionCub()
+        lionessCub.age = 1
+        lionessCub.name = "Nala"
+        lionessCub.image = UIImage(named: "LionCub2.jpeg")
+        lionessCub.subspecies = "Transval"
+        
+        lionCubs += [lionCub, lionessCub]
+        
         
         
     }
@@ -82,9 +104,12 @@ class ViewController: UIViewController {
         case ("Tiger", _):
             let randIndex = Int(arc4random_uniform(UInt32(lions.count)))
             currentAnimal = ("Lion", randIndex)
-        default:
+        case ("LionCub", _):
             let randIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
             currentAnimal = ("Tiger", randIndex)
+        default:
+            let randIndex = Int(arc4random_uniform(UInt32(lionCubs.count)))
+            currentAnimal = ("LionCub", randIndex)
         }
         
     }
@@ -109,9 +134,17 @@ class ViewController: UIViewController {
                 self.breddLbl.text = lion.subspecies
                 self.nameLbl.text = lion.name
                 self.ageLbl.text = "\(lion.age)"
-                self.randoFactLbl.hidden = true
+                self.randoFactLbl.text = lion.randoFact()
                 
+            } else if self.currentAnimal.species == "LionCub" {
+                let lionCub = self.lionCubs[self.currentAnimal.index]
+                self.myImageView.image = lionCub.image
+                self.breddLbl.text = lionCub.subspecies
+                self.nameLbl.text = lionCub.name
+                self.ageLbl.text = "\(lionCub.age)"
+                self.randoFactLbl.text = lionCub.randoFact()
             }
+            
             self.randoFactLbl.hidden = false
             
             

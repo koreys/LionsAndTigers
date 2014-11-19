@@ -16,4 +16,25 @@ class Lion {
     var name = ""
     var subspecies = ""
     
+    func roar() {
+        println("Lion: Roar, Roar!!")
+    }
+    
+    func changeToAlphaMale() {
+        self.isAlphaMale = true
+    }
+    
+    
+    func randoFact() -> String {
+        var randoFact:String
+        
+        if self.isAlphaMale == true {
+            randoFact = "Male lions are easy to recognize thanks to their distinctive manes"
+        }
+        else {
+            randoFact = "Female Lionesses do all the hunting... and are generally bad ass."
+        }
+        
+        return randoFact
+    }
 }
